@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GNA Increaser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <span id="text"></span>
+    </div>
+
+    <script>
+        let textElement = document.getElementById('text');
+        let text = 'GNA ';
+        let counter = 0;
+
+        function addText() {
+            textElement.innerHTML += text;
+            counter++;
+            if (counter < 200) { // adjust the number to control the length
+                setTimeout(addText, 100); // adjust delay for speed
+            }
+        }
+
+        addText();
+    </script>
+</body>
+</html>
